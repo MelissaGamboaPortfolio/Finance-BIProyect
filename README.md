@@ -1,47 +1,95 @@
-Personal finances report
+# Personal Finance BI Report
 
-One of my very first projects: basic indicators to visualize and analyze personal finances. 
+## 📌 Project Overview
+This project is one of my early Business Intelligence initiatives, focused on building a **personal finance reporting solution** using **Power BI**.
 
-The report includes the following information: 
-- Revenue, expenses, profit and balance.
-- Target, budget, expected profit and balance monitoring.
-- Actuals vs expected amounts analysis for all of them.
+The main goal of the project is to visualize and analyze **personal income, expenses, profit, and balance**, while comparing **actual values against targets and expected amounts**.  
+Despite its simplicity, the project applies solid BI fundamentals in data modeling, transformations, and metric calculation.
 
-The project was developed using the following tools: 
-- Excel and json connection to Power BI
-- Power Query transformation: tables combination, columns transformation, calendar table.
-- DAX: basic dax to calculate actual amounts vs expected amounts.
-- Conditional formatting for positive or negative scenarios.
-- Fact and dim tables: a simple Fact Constellation Schema (or Star Schema with Shared Dimensions) was used to relate fact tables (Finanzas and Expectativas) to dim tables (Calendario and Categorias).
-![image](https://github.com/user-attachments/assets/96364337-93d6-403e-853b-91bb6489a7f4)
-- In addition, a table to determine the date and time of latest refresh was computed in order to advice the user about data update.
+---
 
-Final Report - please download .pbix file to see in detail.
+## 🎯 Project Objectives
+- Monitor personal financial performance over time.
+- Compare **actual vs expected** revenue, expenses, profit, and balance.
+- Track budget, targets, and financial expectations.
+- Provide clear visual indicators for positive and negative financial scenarios.
+- Apply core BI concepts in modeling, calculations, and visualization.
 
-Home 
-![image](https://github.com/user-attachments/assets/564c7bff-9074-4497-bcfd-96717898483a)
+---
 
-KPI's
-![image](https://github.com/user-attachments/assets/62fdb973-3e29-479a-bd20-8a647d6e4070)
+## 🏗️ Architecture & Workflow
+The project follows a structured BI workflow:
 
-Revenue
-![image](https://github.com/user-attachments/assets/b1927f4c-1fd3-4668-9aeb-14b7bd3072f0)
+1. **Data Sources**
+   - Excel files for financial records.
+   - JSON files connected to Power BI for complementary data.
 
-Revenue Details
-![image](https://github.com/user-attachments/assets/8ae38b1b-f104-41df-aef0-7cee0d18bf37)
+2. **Data Transformation**
+   - Data preparation performed using **Power Query**.
+   - Combination of multiple tables.
+   - Column transformations and data cleansing.
+   - Creation of a **calendar table** for time-based analysis.
 
-Expenses
-![image](https://github.com/user-attachments/assets/7a2e0a61-4ed6-4040-8b03-43636d1fb7a3)
+3. **Data Modeling**
+   - Implementation of a **Fact Constellation Schema** (Star Schema with shared dimensions).
+   - Fact tables:
+     - `Finanzas` (actual financial transactions)
+     - `Expectativas` (targets, budget, and expected values)
+   - Dimension tables:
+     - `Calendario`
+     - `Categorias`
 
-Expenses Details
-![image](https://github.com/user-attachments/assets/1f4ebf13-1fbd-4e58-96bf-770ae1848e27)
+4. **Analytical Layer**
+   - DAX measures to calculate:
+     - Actual amounts
+     - Expected amounts
+     - Variances between actuals and expectations
 
-Profit
-![image](https://github.com/user-attachments/assets/bb491f78-974a-46a4-bc10-529ba9468541)
+---
 
-Profit Details
-![image](https://github.com/user-attachments/assets/673f5ccd-6c53-441d-8c76-78885a4f501d)
+## 🧱 Data Model
+The data model is designed to support comparative financial analysis:
 
-Balance
-![image](https://github.com/user-attachments/assets/d1f0c947-8580-4977-98d0-f7b02be2aee5)
+### Fact Tables
+- **Finanzas** – Stores actual revenue and expenses.
+- **Expectativas** – Stores budget, targets, and expected values.
+
+### Dimension Tables
+- **Calendario** – Enables time-based analysis.
+- **Categorias** – Groups financial records by category.
+
+This structure enables consistent comparisons between actual and expected values.
+
+---
+
+## 📐 DAX & Calculations
+The project uses **basic DAX measures** to:
+- Calculate actual and expected financial metrics.
+- Compare real values against targets.
+- Support conditional formatting logic.
+
+Although the DAX is intentionally simple, it is designed to be **clear, reusable, and filter-aware**.
+
+---
+
+## 📊 Data Visualization with Power BI
+The Power BI report includes visualizations for:
+
+- Revenue, expenses, profit, and balance.
+- Actual vs expected comparisons.
+- Budget and target monitoring.
+- Conditional formatting to highlight:
+  - Positive financial scenarios
+  - Negative financial scenarios
+
+The report focuses on clarity and usability rather than complexity.
+
+---
+
+## ⏱️ Data Refresh Monitoring
+An additional table was created to compute and display:
+- **Date and time of the latest data refresh**
+
+This feature helps users understand data freshness and ensures transparency in reporting.
+
 
